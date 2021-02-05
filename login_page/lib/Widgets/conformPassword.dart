@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/Palette/constants.dart';
-class EnterPassword extends StatefulWidget {
+class ConformPassword extends StatefulWidget {
   @override
-  _EnterPasswordState createState() => _EnterPasswordState();
+  _ConformPasswordState createState() => _ConformPasswordState();
 }
 
-class _EnterPasswordState extends State<EnterPassword> {
+class _ConformPasswordState extends State<ConformPassword> {
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          'Password',
+          'Conform password',
           style: labelStyle,
         ),
         SizedBox(height: 10.0),
@@ -33,7 +33,7 @@ class _EnterPasswordState extends State<EnterPassword> {
                 Icons.lock,
                 color: Colors.white,
               ),
-              hintText: 'Enter your Password',
+              hintText: 'Conform your Password',
               hintStyle: hintTextStyle,
             ),
           ),

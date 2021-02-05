@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/utilities/constants.dart';
+import 'package:login_page/Palette/constants.dart';
 class LogoSpace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

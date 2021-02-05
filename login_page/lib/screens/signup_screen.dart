@@ -1,34 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'file:///C:/programming/GitHub/Firebase-Auth/New/login_page/lib/Palette/PageBackground.dart';
+import 'package:login_page/Palette/PageBackground.dart';
+import 'package:login_page/Palette/constants.dart';
+import 'package:login_page/Widgets/conformPassword.dart';
 import 'package:login_page/Widgets/enterEmail.dart';
 import 'package:login_page/Widgets/enterPassword.dart';
+import 'package:login_page/Widgets/enterUsername.dart';
 import 'package:login_page/Widgets/forgotPassword.dart';
-import 'package:login_page/Widgets/loginButton.dart';
 import 'package:login_page/Widgets/logoSpace.dart';
 import 'package:login_page/Widgets/rememberMeCheckbox.dart';
-import 'package:login_page/Palette/constants.dart';
-import 'package:login_page/screens/signup_screen.dart';
 
-class LoginScreen extends StatefulWidget {
+class SighupScreen extends StatefulWidget {
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _SighupScreenState createState() => _SighupScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-  Widget _newUser() {
+class _SighupScreenState extends State<SighupScreen> {
+  Widget _logIn() {
     return GestureDetector(
       child: Text(
-        'New user ?',
+        'Login',
         style: labelStyle,
       ),
       onTap: ()=>{
-        print("New user Clicked")
+        print("login Clicked")
         //Navigator.pushReplacementNamed()
       },
     );
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,13 +52,18 @@ class _LoginScreenState extends State<LoginScreen> {
                       //SizedBox(height: 60),
                       LogoSpace(),
                       SizedBox(height: 20.0),
+                      EnterUsername(),
+                      SizedBox(height: 20),
                       EnterEmail(),
                       SizedBox(height: 20.0),
                       EnterPassword(),
-                      ForgotPassword(),
+                      SizedBox(height: 20),
+                      ConformPassword(),
+                      SizedBox(height: 20),
                       RememberMeCheckbox(),
-                      LoginButton(),
-                      _newUser(),
+                      _logIn(),
+                      //LoginButton(),
+                      //_newUser(),
                     ],
                   ),
                 ),
